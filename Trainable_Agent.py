@@ -4,7 +4,7 @@ from litellm import completion
 
 # ---------------------- PAGE SETUP ----------------------
 st.set_page_config(page_title="Trainable Agent", page_icon="🤖", layout="centered")
-st.title("Trainable Agent (Groq API)")
+st.title("Trainable Agent")
 
 # ---------------------- SESSION STATE ----------------------
 if "system_prompt" not in st.session_state:
@@ -77,3 +77,4 @@ if st.session_state.system_prompt:
             st.markdown(f"**You:** {msg['content']}")
         else:
             st.markdown(f"**{agent_name}:** {msg['content']}")
+
